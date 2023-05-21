@@ -43,6 +43,7 @@ $u = new GestionUser($cnx);
         </div>";
     }
 
+    if (isset($_SESSION['id'])) {
 ?>
 <form method="POST" action="post/envoieCom.php" id="sendComment" class="container mb-4">
     <HR/>
@@ -50,3 +51,6 @@ $u = new GestionUser($cnx);
     <textarea name="comment" class="border border-3 border-secondary rounded mt-1 w-100 p-3" placeholder="Ajouter un commentaire..." required></textarea>
     <button type="submit" class="btn btn-secondary">Publier mon commentaire</button>
 </form>
+<?php
+}
+?>
